@@ -7,14 +7,16 @@
 
 ### Simple situation
 Given a set of objects
-- 
-```
-UF(int N) // initialize the data structure with all objects
-void union(int p, int q) // connect two objects
-boolean connected(int p, int q) // are two objects connected
-//Find the whole component from a single object.
-int count() // number of components
-```
+UF(int N) 
+    initialize the data structure with all objects
+void union(int p, int q)
+    connect two objects
+boolean connected(int p, int q) 
+    are two objects connected
+int find(int p)
+    find the whole component from a single object.
+int count() 
+    number of components
 
 ### Quick Find
 **Use array (index, value) to store the objects and components.**
@@ -33,7 +35,7 @@ public class QuickFindUF(){
     public boolean connected(int p, intq){
         return id[p] == id[q];
     }
-    // O(n) - *2N+2 array acesses*`
+    // O(n) - 2N+2 array acesses
     public void union(int p, int q){
         int pid = id[p];
         int qid = id[q];
