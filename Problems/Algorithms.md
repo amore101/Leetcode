@@ -33,7 +33,7 @@ public class QuickFindUF(){
     public boolean connected(int p, intq){
         return id[p] == id[q];
     }
-    // O(n)
+    // O(n) - *2N+2 array acesses*`
     public void union(int p, int q){
         int pid = id[p];
         int qid = id[q];
@@ -71,7 +71,7 @@ public class QuickFindUF(){
     public boolean connected(int p, intq){
         return id[p] == id[q];
     }
-    // O(n) - *2N+2 array acesses*
+    // O(n) - 
     public void union(int p, int q){
         int pid = id[p];
         int qid = id[q];
