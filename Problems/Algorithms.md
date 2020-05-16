@@ -127,4 +127,4 @@ Only one extra line can half the path length.
         return i;
     }
 ```
-![Time Cost](Images/Union.png)
+![Time Cost](https://github.com/amore101/Leetcode/blob/master/Images/Union.png)
