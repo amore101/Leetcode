@@ -15,3 +15,24 @@ Given a 2d grid map of '1's (land) and '0's (water), count the number of islands
 - BFS
    - Solve every node separately in each layer.
    - Because of using queue, consider what to store in the queue to tranfer the node.
+       - For 2d grid, ***k = r\*nc + c***
+
+## 130. Surrounded Regions
+Given a 2D board containing 'X' and 'O' (the letter O), capture all regions surrounded by 'X'.
+A region is captured by flipping all 'O's into 'X's in that surrounded region.
+
+### Idea
+- my idea: 
+   - iterate every node, Wrong!!!!
+      - find component and change all 'O's to 'M'
+      - change surrounded components 'M' to 'X'  Wrong!!!!!!
+   - change 'M' to 'O'
+    
+-  correct idea:
+   - iterate every boundary node
+       - find component connected with boundary node, change 'O' to 'M'
+   - change 'O' to 'X', change 'M' to 'O'
+
+### Important points
+- how to iterate boundary nodes
+- change node to avoid repeatedly visiting
